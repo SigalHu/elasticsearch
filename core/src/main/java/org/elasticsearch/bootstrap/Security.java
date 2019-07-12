@@ -208,7 +208,8 @@ final class Security {
                         // pass in an extra system property that omits the -version.jar suffix the other properties have.
                         // That allows the snapshots to reference snapshot builds of the client, and release builds to
                         // referenced release builds of the client, all with the same grant statements.
-                        final String esVersion = Version.CURRENT + (Build.CURRENT.isSnapshot() ? "-SNAPSHOT" : "");
+//                        final String esVersion = Version.CURRENT + (Build.CURRENT.isSnapshot() ? "-SNAPSHOT" : "");
+                        final String esVersion = Version.CURRENT.toString();
                         final int index = property.indexOf("-" + esVersion + ".jar");
                         assert index >= 0;
                         String restClientAlias = property.substring(0, index);
