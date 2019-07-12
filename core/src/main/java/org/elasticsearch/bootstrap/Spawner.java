@@ -65,7 +65,8 @@ final class Spawner implements Closeable {
         }
         final Path pluginsFile = environment.pluginsFile();
         if (!Files.exists(pluginsFile)) {
-            throw new IllegalStateException("plugins directory [" + pluginsFile + "] not found");
+            Files.createDirectories(pluginsFile);
+//            throw new IllegalStateException("plugins directory [" + pluginsFile + "] not found");
         }
         /*
          * For each plugin, attempt to spawn the controller daemon. Silently ignore any plugin that
