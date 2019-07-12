@@ -46,3 +46,8 @@ html_docs
 backwards/
 eclipse-build
 
+core/bin/
+core/data/
+core/logs/
+core/lib/
+core/plugins/
