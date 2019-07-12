@@ -27,6 +27,12 @@ import org.elasticsearch.gradle.BuildPlugin
 import org.elasticsearch.gradle.VersionProperties
 import org.elasticsearch.gradle.Version
 
+allprojects {
+    repositories {
+         maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    }
+}
+
 // common maven publishing configuration
 subprojects {
   group = 'org.elasticsearch'
